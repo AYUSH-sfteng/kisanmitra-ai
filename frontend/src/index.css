@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2E7D32;
+  --color-primary-dark: #1b5e20;
+  --color-secondary: #4CAF50;
+  --color-accent: #81C784;
+  --color-farmbg: #F8FAF8;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --radius-card: 16px;
+  --radius-btn: 12px;
+}
+
+:root {
+  --primary: #2E7D32;
+  --primary-dark: #1b5e20;
+  --secondary: #4CAF50;
+  --accent: #81C784;
+  --bg-farm: #F8FAF8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8FAF8;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom premium pulse animation for the active agent glow */
+@keyframes agentPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4);
+    border-color: #4CAF50;
+  }
+  50% {
+    box-shadow: 0 0 16px 6px rgba(46, 125, 50, 0.2);
+    border-color: #81C784;
+  }
+}
+
+.agent-active-glow {
+  animation: agentPulse 2s infinite ease-in-out;
+}
+
+/* Custom dash movement for the connecting lines traveling dot */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.line-dash-flow {
+  stroke-dasharray: 8 6;
+  animation: dash 1.5s linear infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
